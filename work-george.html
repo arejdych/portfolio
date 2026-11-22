@@ -90,13 +90,14 @@ canvas.dust{display:block;width:100%;height:100%;image-rendering:pixelated;point
 .demo.ph h3{margin:14px 0 12px;font:600 32px/1.1 Geist,sans-serif;letter-spacing:-.02em;color:#0B0F1A}
 .demo.ph p{margin:0;font:400 16px/1.6 Geist,sans-serif;color:#2B3140}
 .demo.ph .call{margin-top:16px;color:#5B6270}.demo.ph .call a{color:#0B0F1A;text-decoration:underline}
-@media(max-width:820px){.seg{overflow-x:auto;justify-content:flex-start}.seg button{white-space:nowrap;padding:10px 16px}.demo.ph .phc{padding:28px 22px}.demo.ph .ico{width:80px;height:80px}.demo.ph h3{font-size:24px}}
+@media(max-width:820px){.demo.ph .phc{padding:28px 22px}.demo.ph .ico{width:80px;height:80px}.demo.ph h3{font-size:24px}}
 @media(prefers-reduced-motion:reduce){.demo .s2,.demo .s3,.demo .phone .m2,.demo .cur,.demo .ring{animation:none}}
 
 .panel{display:none}.panel.on{display:block}
 .seg{display:flex;width:max-content;max-width:100%;margin:28px auto 0;padding:4px;border-radius:999px;background:#EEF0F4;position:relative;z-index:1}
 .seg button{border:0;background:transparent;font:500 14px Geist,sans-serif;color:#4A5160;padding:10px 22px;border-radius:999px;cursor:pointer;transition:background-color .16s ease,color .16s ease}
 .seg button[aria-selected=true]{background:#fff;color:#0B0F1A;box-shadow:0 1px 4px rgba(11,15,26,.12)}
+@media(max-width:820px){.seg{width:100%;flex-wrap:wrap;justify-content:center;gap:4px;border-radius:22px}.seg button{flex:1 1 auto;padding:10px 14px;font-size:13.5px;white-space:nowrap}}
 .demo.acc .phone{width:20.5%;aspect-ratio:837/1701;right:180px;bottom:-38px}
 .demo.acc .s2{animation-name:a2}.demo.acc .s3{animation-name:a3}
 .demo.acc .phone .m2,.demo.acc .phone .m3{opacity:0;animation:a2 9.6s ease-in-out infinite}.demo.acc .phone .m3{animation-name:a3}
