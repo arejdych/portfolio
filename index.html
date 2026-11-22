@@ -251,7 +251,7 @@ canvas.dust{display:block;width:100%;height:100%;image-rendering:pixelated;point
 </nav>
 </div>
 </div>
-<script>(function(){var n=document.querySelector('.nav'),b=n.querySelector('.nav-toggle');function t(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o)}b.addEventListener('click',function(){t(!n.classList.contains('open'))});n.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){t(false)})})})();</script>
+<script>document.addEventListener('click',function(e){var n=document.querySelector('.nav');if(!n)return;var t=e.target.closest&&e.target.closest('.nav-toggle'),l=e.target.closest&&e.target.closest('.nav .links a');if(!t&&!l)return;var o=t?!n.classList.contains('open'):false;n.classList.toggle('open',o);var b=n.querySelector('.nav-toggle');if(b)b.setAttribute('aria-expanded',o)});</script>
 <div class="nav-spacer" aria-hidden="true"></div>
 
 <div class="sec" style="padding-top:150px;padding-bottom:150px;position:relative">
