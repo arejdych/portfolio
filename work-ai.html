@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Experiments — Aneta Rejdych</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#fff;color:#0B0F1A;font-family:Geist,sans-serif}
+a{color:#1F5BFF}a:hover{color:#1442C8}
+.h1{font-family:Geist,sans-serif;font-weight:600;letter-spacing:-.04em;line-height:.98;margin:0}
+.h2{font-size:32px;margin-bottom:24px}
+.sec{position:relative;padding:0 64px;max-width:1312px;margin:0 auto}
+.tag{display:inline-block;padding:6px 11px;border-radius:999px;background:#EEF0F4;color:#4A5160;font:500 11px Geist,sans-serif}
+.eyebrow{font:500 10.4px Geist,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#5B6270}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:56px;padding-top:32px;border-top:1px solid #E3E6EC}
+.meta .k{font-size:11px;color:#5B6270;margin-bottom:8px}.meta .v{font-size:14px;line-height:1.4;font-weight:500}
+.hero{width:100%;margin-top:56px;display:block}
+.blk{display:grid;grid-template-columns:120px 1fr;gap:24px;margin-top:96px;max-width:1000px}
+.num{font:500 15px Geist,sans-serif;color:#5B6270;padding-top:12px}
+.body{font-size:16px;line-height:1.55;max-width:760px;margin:0 0 20px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
+.stat{background:#F3F5F9;border-radius:16px;padding:28px}
+.stat .n{font:600 40px Geist,sans-serif;letter-spacing:-.04em}.stat .l{font-size:14px;margin-top:8px}
+.todo{color:#9A6B00;background:#FFF6DD;border-radius:6px;padding:2px 8px;font-size:17px}
+.chat{margin-top:120px;padding-top:48px;border-top:1px solid #E3E6EC}
+@media(max-width:820px){.sec{padding:0 24px}.h1{font-size:28px!important}.h2{font-size:24px!important}.nav{flex-wrap:wrap;row-gap:12px}.meta{grid-template-columns:1fr 1fr}.blk{grid-template-columns:1fr;gap:0;margin-top:64px}.stats{grid-template-columns:1fr}}
+.px{position:absolute;left:0;right:0;top:0;height:760px;overflow:hidden;pointer-events:none;-webkit-mask-image:linear-gradient(#000 62%,transparent);mask-image:linear-gradient(#000 62%,transparent);z-index:0}
+.px-foot{position:absolute;left:0;right:0;bottom:0;height:680px;overflow:hidden;pointer-events:none;-webkit-mask-image:linear-gradient(transparent,#000 42%);mask-image:linear-gradient(transparent,#000 42%);z-index:0}
+canvas.dust{display:block;width:100%;height:100%;image-rendering:pixelated;pointer-events:none}
+.px canvas.dust,.px-foot canvas.dust{position:absolute;inset:0}
+.page{position:relative;overflow:hidden}.page>.sec{position:relative;z-index:1}
+.shot{position:relative;isolation:isolate;margin-top:56px}
+.shot>canvas.dust{position:absolute;z-index:0;left:50%;top:46%;width:100vw;height:108%;transform:translate(-50%,-50%);-webkit-mask-image:linear-gradient(transparent,#000 10%,#000 88%,transparent);mask-image:linear-gradient(transparent,#000 10%,#000 88%,transparent)}
+.shot>img.hero{position:relative;z-index:1;margin-top:0}
+@font-face{font-family:'Geist Serif';src:url('./assets/fonts/GeistSerif-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+.more{display:inline-flex;align-items:center;gap:8px;padding:11px 21px;border-radius:999px;background:#0B0F1A;color:#fff;font:500 14px Geist,sans-serif;text-decoration:none;transition:transform .16s ease,background-color .16s ease}
+.more:hover,.more:focus-visible{color:#fff;background:#1a2030}
+.more:active{transform:scale(.97)}
+.more .arrow{display:inline-block;transition:transform .16s ease}
+.more:hover .arrow{transform:translateX(-2px)}
+.talk{font-family:'Geist Serif',Geist,serif;font-weight:400;font-size:72px}
+@media(max-width:820px){.talk{font-size:45px!important}}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="px"><canvas class="dust" data-kind="hero" data-at="78" data-strength="1" data-fade-top="0" aria-hidden="true"></canvas></div>
+<div class="px-foot"><canvas class="dust" data-kind="foot" data-at="78" data-y="72" data-strength="0.95" data-fade-top="0" aria-hidden="true"></canvas></div>
+<div class="sec" style="padding-top:44px"><a href="index.html" style="font:600 20px Geist,sans-serif;letter-spacing:-.02em;text-decoration:none;color:#0B0F1A">Aneta Rejdych</a></div>
+
+<main class="sec" style="padding-top:96px;padding-bottom:120px">
+<p class="eyebrow">Experiments</p>
+<h1 class="h1" style="font-size:49px;max-width:1000px;margin-top:16px">AI Experiments</h1>
+<p style="font-size:16px;line-height:1.5;max-width:760px;margin:36px 0 0">Hands-on trials with AI in product design: prototyping in code, testing workflows, and pushing tools until they break or ship.</p>
+<div class="meta"><div><div class="k">My role</div><div class="v">Designer and builder</div></div><div><div class="k">Team</div><div class="v">Solo</div></div><div><div class="k">Platform</div><div class="v">Web</div></div><div><div class="k">Scope</div><div class="v">Exploration</div></div></div>
+
+<section class="blk"><div class="num">01</div><div><h2 class="h1 h2">Context</h2><p class="body"><span class="todo">Add: why you started experimenting with AI.</span></p></div></section>
+<section class="blk"><div class="num">02</div><div><h2 class="h1 h2">Strategic problem</h2><p class="body"><span class="todo">Add: the question you wanted to answer.</span></p></div></section>
+<section class="blk"><div class="num">03</div><div><h2 class="h1 h2">Role and leadership</h2><p class="body">I prototype in code, ship PRs to production, run AI-assisted UX audits, and automate design system specs and Figma Code Connect.</p></div></section>
+<section class="blk"><div class="num">04</div><div><h2 class="h1 h2">Constraints and challenges</h2><p class="body"><span class="todo">Add: limits you hit with the tools.</span></p></div></section>
+<section class="blk"><div class="num">05</div><div><h2 class="h1 h2">Outcome and impact</h2><p class="body"><span class="todo">Add: what shipped or changed in how you work.</span></p></div></section>
+<section class="blk"><div class="num">06</div><div><h2 class="h1 h2">Reflection</h2><p class="body"><span class="todo">Add: what you learned.</span></p></div></section>
+<div class="chat">
+<div class="h1 talk">Let’s talk.</div>
+<a href="mailto:arejdych@gmail.com" style="display:inline-block;margin-top:32px;font:600 36px Geist,sans-serif;letter-spacing:-.02em;text-decoration:underline;text-underline-offset:8px;color:#0B0F1A">arejdych@gmail.com</a>
+<p style="margin-top:56px"><a class="more" href="index.html#further"><span class="arrow" aria-hidden="true">←</span> Back to More</a></p>
+</div>
+</main>
+</div>
+<script src="./dust.js"></script>
+</body>
+</html>

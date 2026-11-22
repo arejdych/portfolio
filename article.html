@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to evaluate a stock — Aneta Rejdych</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#fff;color:#0B0F1A;font-family:Geist,sans-serif}
+a{color:#1F5BFF}
+a:hover{color:#1442C8}
+.h1{font-family:Geist,sans-serif;font-weight:600;letter-spacing:-.04em;line-height:.98;margin:0}
+.sec{position:relative;padding:0 64px;max-width:1312px;margin:0 auto}
+.prose{max-width:740px;font-size:17px;line-height:1.7}
+.prose h2{font-family:Geist,sans-serif;font-weight:600;letter-spacing:-.03em;font-size:32px;line-height:1.05;margin:56px 0 0}
+.prose h3{font-family:Geist,sans-serif;font-weight:600;letter-spacing:-.03em;font-size:28px;margin:48px 0 0;display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.prose p{margin:16px 0 0}
+.prose ul,.prose ol{margin:16px 0 0;padding-left:1.2em}
+.prose li{margin:8px 0}
+.indicator{border-top:1px solid #D9DCE3;padding:16px 0}
+.indicator:last-child{border-bottom:1px solid #D9DCE3}
+.indicator div{display:flex;justify-content:space-between;gap:16px;font-weight:500}
+.indicator p{margin:6px 0 0;color:#5B6270;font-size:15px;font-weight:400}
+table{width:100%;border-collapse:collapse;margin-top:24px;text-align:left}
+th,td{padding:14px 16px 14px 0;border-bottom:1px solid #D9DCE3;vertical-align:top}
+thead th{font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;border-bottom-color:#0B0F1A}
+.scale{border-top:1px solid #D9DCE3;border-bottom:1px solid #D9DCE3;margin-top:20px;padding:0;list-style:none}
+.scale li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #D9DCE3;margin:0}
+.scale li:last-child{border-bottom:0}
+.muted{color:#5B6270}
+.g{color:#15803d}.v{color:#1d4ed8}.f{color:#b45309}
+figure{margin:48px 0 0;max-width:1100px}
+figure img{width:100%;display:block;border-radius:24px;background:#F4F6FB}
+figcaption{margin-top:12px;color:#5B6270;font-size:15px;max-width:740px}
+@media(max-width:820px){
+  .sec{padding:0 24px}
+  .h1{font-size:35px!important}
+  .prose h2{font-size:32px}
+  .nav{flex-wrap:wrap;row-gap:12px}
+}
+</style>
+</head>
+<body>
+<div class="sec nav" style="display:flex;justify-content:space-between;align-items:center;padding-top:28px;padding-bottom:28px;gap:16px">
+<a href="index.html" style="font:600 20px Geist,sans-serif;letter-spacing:-.02em;text-decoration:none;color:#0B0F1A">Aneta Rejdych</a>
+<div style="display:flex;gap:28px;font-size:15px;font-weight:500"><a href="index.html#work" style="text-decoration:none;color:#0B0F1A">Work</a><a href="index.html#experience" style="text-decoration:none;color:#0B0F1A">Experience</a><a href="index.html#further" style="text-decoration:none;color:#0B0F1A">More</a><a href="index.html#contact" style="text-decoration:none;color:#0B0F1A">Contact</a></div>
+</div>
+
+<main class="sec" style="padding-top:40px;padding-bottom:120px">
+<p style="font:500 13px Geist,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#5B6270">Article</p>
+<h1 class="h1" style="font-size:61px;max-width:920px;margin-top:16px">How to evaluate a stock?</h1>
+<p style="font-size:22px;line-height:1.5;max-width:720px;margin:24px 0 0">A scoring model explained in plain English. A company must do well on all three pillars to earn a high score.</p>
+<p style="margin:32px 0 0;font-size:14px;font-weight:500;letter-spacing:.14em;text-transform:uppercase">Final score = Growth + Valuation + Fundamentals</p>
+<p class="muted" style="margin:16px 0 0;font-size:15px;max-width:720px">This explains a method for comparing companies. It is not a recommendation to buy or sell any stock.</p>
+
+<div class="prose">
+<h2>Where does this model come from?</h2>
+<p>The model is based on the teachings of <a href="https://www.uniwersytet-inwestycyjny.pl/">Tomasz Trela’s Investment University</a> (Uniwersytet Inwestycyjny), a course that teaches investing the way professionals managing large funds do it. It draws on the <a href="https://www.cfainstitute.org/">CFA</a> program, an international qualification for financial analysts that is widely regarded as the gold standard in the industry. Tomasz Trela also runs an excellent <a href="https://www.youtube.com/@TomaszTrading">YouTube channel</a> about investing, a useful place to see the approach before deciding on the course.</p>
+<p>Instead of chasing hot tips or guessing from charts, this approach asks three simple questions about every company:</p>
+<ol>
+<li><b class="g">Is the company growing?</b></li>
+<li><b class="v">Are its shares cheap or expensive?</b></li>
+<li><b class="f">Is the company safe, and will it stay in business?</b></li>
+</ol>
+<p>The scoring model answers these questions with numbers. It is implemented in the Scrab platform.</p>
+
+<h2>How does it work? The school analogy</h2>
+<p>Think of a school report card. A student gets grades in several subjects, and then an average is calculated, a weighted one, because maths counts for more than art.</p>
+<p>The scoring model works the same way.</p>
+<ul>
+<li><b>Subjects</b> are financial indicators, for example how much revenue grew over 5 years.</li>
+<li><b>Grade</b> is the number of points a company gets for a given indicator.</li>
+<li><b>Subject weight</b> tells you how much each indicator counts towards the final result.</li>
+<li><b>Final score</b> is the sum of all points. The higher it is, the better the company according to the model.</li>
+</ul>
+<p>This makes it possible to compare hundreds of companies quickly and pick the strongest, instead of reading hundreds of reports.</p>
+
+<h2>Where does the grade come from?</h2>
+<p>How do you turn “revenue grew by 80%” into a grade? This is where grading scales come in.</p>
+<p>For every indicator, two thresholds are set: poor and excellent. For 5-year revenue growth the scale is 50–250%.</p>
+<ul class="scale">
+<li><span>Growth of 50% or less</span><span class="muted">0 points, poor</span></li>
+<li><span>Growth of 150%</span><span class="muted">About half the points</span></li>
+<li><span>Growth of 250% or more</span><span class="muted">Maximum points</span></li>
+</ul>
+<p>It’s like percentage thresholds at school: below 50% you fail, above 90% you get an A, and in between the grade rises gradually.</p>
+<p>Why do it this way?</p>
+<ul>
+<li><b>So that different things can be added together.</b> Percentages, multiples, and probabilities are different units. The scale converts them all into points that can be summed.</li>
+<li><b>So that mediocrity isn’t rewarded.</b> A company that grew 10% gets the same as one that shrank: zero. The model looks for genuinely good companies, not okay ones.</li>
+<li><b>So that one record doesn’t hide everything else.</b> A company that grew 1000% gets the same as one that grew 250%: the maximum. A single spectacular result can’t mask, say, a risk of bankruptcy.</li>
+</ul>
+<p>For some indicators, lower is better, for example bankruptcy risk. In that case the scale works in reverse.</p>
+</div>
+
+<figure>
+<img src="./assets/three-pillars.png" alt="The three pillars of the scoring model: Growth worth 40 points, Valuation worth 50, and Fundamentals worth 45.">
+<figcaption>Growth, valuation, and fundamentals. The final score is the sum. No single pillar is enough on its own.</figcaption>
+</figure>
+
+<div class="prose">
+<h2>The three pillars of the model</h2>
+
+<h3>1. Growth <span class="g">40 pts</span></h3>
+<p><b>Is the company really growing?</b></p>
+<p>The model looks backwards, at what the company achieved over the last 5 years, and forwards, at what analysts expect over the next 2 years. It checks three things: revenue (how much the company sells), earnings per share (how much it earns per single share), and cash from operations (how much real money actually comes in).</p>
+<p>Why does cash carry the most weight? Because accounting profit can be tweaked, but cash in the bank cannot. If a company says it’s making money and cash isn’t piling up, something is wrong.</p>
+<div class="indicator"><div>Cash from Ops TTM 5y <span class="g">10 pts</span></div><p>How much cash from day-to-day operations grew over 5 years. Scale 100–350%. The most important growth indicator.</p></div>
+<div class="indicator"><div>EPS TTM 5y <span class="g">7.5 pts</span></div><p>How much earnings per share grew over 5 years. Scale 35–200%.</p></div>
+<div class="indicator"><div>Return on Invested Capital <span class="g">5 pts</span></div><p>How much the company earns for every dollar invested in it. Think of it as the interest rate the business pays. Scale 10–30: 10% is decent, 30% is excellent.</p></div>
+<div class="indicator"><div>Cash Average Estimates 2fy <span class="g">5 pts</span></div><p>How much analysts expect cash flow to grow over the next 2 years. Scale 5–40.</p></div>
+<div class="indicator"><div>Revenue Average Estimate 2FY <span class="g">5 pts</span></div><p>How much analysts expect revenue to grow over the next 2 years. Scale 5–20.</p></div>
+<div class="indicator"><div>Revenue TTM 5y <span class="g">5 pts</span></div><p>How much revenue grew over 5 years. Scale 50–250%.</p></div>
+<div class="indicator"><div>EPS Average Estimate 2y <span class="g">2.5 pts</span></div><p>How much analysts expect earnings per share to grow over the next 2 years. Scale 5–30.</p></div>
+<p>The thresholds are high. The model isn’t looking for companies that grow somewhat. It’s looking for those that grow fast.</p>
+
+<h3>2. Valuation <span class="v">50 pts</span></h3>
+<p><b>Are the shares too expensive?</b></p>
+<p>Even a great company can be a bad investment if you overpay. It’s like buying a flat: beautiful and well located, but at three times the market price, a bad deal.</p>
+<p>The first three indicators are multiples. They tell you how many dollars you pay for every dollar the company generates. The lower the multiple, the cheaper the stock. The next two are based on price targets: what professional analysts think the share should be worth in a year. Together, 35 of the 50 points depend on analyst opinions. The model treats their consensus as an important reference point.</p>
+<div class="indicator"><div>Price Target <span class="v">20 pts</span></div><p>Whether the share trades below the price target. Scale −10% to 0%. If it costs more than analysts consider fair, it gets 0 points: the market has already priced in the good news.</p></div>
+<div class="indicator"><div>Upside <span class="v">15 pts</span></div><p>By what percentage the price target exceeds the current price. If a share costs $100 and analysts say it should be worth $130, the upside is 30%.</p></div>
+<div class="indicator"><div>P/S <span class="v">5 pts</span></div><p>Price to sales. How much you pay for every dollar of the company’s revenue.</p></div>
+<div class="indicator"><div>EV/EBITDA <span class="v">5 pts</span></div><p>The value of the whole company, including its debt, relative to profit from its core business. A heavily indebted company is more expensive than it looks.</p></div>
+<div class="indicator"><div>P/CFO <span class="v">5 pts</span></div><p>Price to cash from operations. How much you pay for every dollar of real cash the company produces.</p></div>
+<p>Analysts can be wrong, of course. But they usually specialise in a single sector for years and know it far better than an individual investor ever could. Their consensus is not something to follow blindly. It is a credible signal, and it deserves a place in the assessment.</p>
+
+<h3>3. Fundamentals <span class="f">45 pts</span></h3>
+<p><b>Will the company stay in business?</b></p>
+<p>This is the safety pillar. You can find a fast-growing, cheap company, but if it goes bankrupt next year, you lose everything.</p>
+<p>Instead of checking dozens of debt ratios, the model uses two ready-made bankruptcy tests, developed by academics from thousands of companies that actually failed or survived. Each test takes a handful of numbers from the financial statements — debt, profits, liquidity, and size — and calculates a single risk score.</p>
+<div class="indicator"><div>Ohlson default probability <span class="f">25 pts</span></div><p>The Ohlson test. The lower the value, the lower the risk of bankruptcy. Here lower is better, so the scale is reversed: 2 is poor, 0 is excellent.</p></div>
+<div class="indicator"><div>Altman default probability <span class="f">20 pts</span></div><p>The Altman test, the Z-score, in use since the 1960s. Values below about 1.8 mean the distress zone, above about 3 the safe zone. The model’s scale, 1.25–3.00, covers that transition.</p></div>
+<p>Why does this pillar carry 45 points? Because investing follows one rule: first don’t lose, then make money.</p>
+
+<h2>How it works on Scrab</h2>
+<p>Calculating all these indicators by hand for hundreds of companies would be impossible. This is where the <a href="https://scrab.com/">Scrab</a> platform comes in. It scans companies listed on stock exchanges around the world and applies the scoring model to each of them. The result is a ranking: companies that, according to the model, have the greatest potential.</p>
+<p>The system pulls fresh data every day, recalculates the indicators, and shows a new score. The ranking is alive. A company that was in the top ten yesterday may drop to twentieth place today because the share price rose and the upside shrank, or because analysts cut their forecasts.</p>
+<p>That does not mean you have to sell a stock right away when it drops a few places. Daily fluctuations are normal. The ranking is there to find candidates for a portfolio and to notice when something worrying is happening, not for nervous trading.</p>
+<p>You don’t have to use Scrab. It is simply the platform where this model is available out of the box. Other tools offer similar screening. What matters is the method, not the brand.</p>
+
+<h2>Numbers aren’t everything</h2>
+<p>A high ranking score is an invitation to do more work, not a ready-made decision. The model tells you what the numbers show, but not why. On top of the scoring, you need qualitative analysis: how the industry is developing, how the company makes money, and what protects it from competitors.</p>
+<p>Indicators describe the past, in financial statements, and forecasts, from analysts. Both react with a delay. Before a new competitor, a regulatory change, or the loss of a key contract shows up in revenue and margins, several quarters may pass, even if the event itself was known immediately. The ranking tells you where to look. Qualitative analysis helps you decide whether to buy.</p>
+
+<h2>Summary</h2>
+<p>At its core, the scoring model is a professional analyst’s checklist turned into points.</p>
+<table>
+<thead><tr><th>Pillar</th><th>Question</th><th>Weight</th></tr></thead>
+<tbody>
+<tr><th class="g">Growth</th><td>Is the company growing?</td><td>40</td></tr>
+<tr><th class="v">Valuation</th><td>Is the price reasonable?</td><td>50</td></tr>
+<tr><th class="f">Fundamentals</th><td>Is the company safe?</td><td>45</td></tr>
+</tbody>
+</table>
+<p>We’re looking for companies that grow fast, are reasonably priced, and are not at risk of bankruptcy. No single pillar is enough on its own.</p>
+<ul>
+<li>A fast-growing company at an absurd price: high Growth, low Valuation.</li>
+<li>A cheap company on the brink of collapse: high Valuation, low Fundamentals.</li>
+<li>A safe, cheap company that has stood still for years: low Growth.</li>
+</ul>
+<p>Only a company that does well across all three pillars gets a high final score. This balance, rather than a single magic indicator, is the essence of the CFA approach on which the Investment University is built.</p>
+<p>How and when to rebalance a portfolio based on the ranking is the next article.</p>
+<p style="margin-top:40px;border-top:1px solid #D9DCE3;padding-top:24px"><a href="index.html#further">← Back to the portfolio</a></p>
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.DS_Store
+tsconfig.tsbuildinfo
+node_modules
+.next
+
+# source exports (page uses the copies in assets/)
+/countries/
+/assets/dashboard/
+/assets/accounts/
+/assets/cards/

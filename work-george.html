@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One banking platform for companies, across markets — Aneta Rejdych</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#fff;color:#0B0F1A;font-family:Geist,sans-serif}
+a{color:#1F5BFF}a:hover{color:#1442C8}
+.h1{font-family:Geist,sans-serif;font-weight:600;letter-spacing:-.04em;line-height:.98;margin:0}
+.h2{font-size:32px;margin-bottom:24px}
+.sec{position:relative;padding:0 64px;max-width:1312px;margin:0 auto}
+.tag{display:inline-block;padding:6px 11px;border-radius:999px;background:#EEF0F4;color:#4A5160;font:500 11px Geist,sans-serif}
+.eyebrow{font:500 10.4px Geist,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#5B6270}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:56px;padding-top:32px;border-top:1px solid #E3E6EC}
+.meta .k{font-size:11px;color:#5B6270;margin-bottom:8px}.meta .v{font-size:14px;line-height:1.4;font-weight:500}
+.hero{width:100%;margin-top:56px;display:block}
+.blk{display:grid;grid-template-columns:120px 1fr;gap:24px;margin-top:96px;max-width:1000px}
+.num{font:500 15px Geist,sans-serif;color:#5B6270;padding-top:12px}
+.body{font-size:16px;line-height:1.55;max-width:760px;margin:0 0 20px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
+.stat{background:#F3F5F9;border-radius:16px;padding:28px}
+.stat .n{font:600 40px Geist,sans-serif;letter-spacing:-.04em}.stat .l{font-size:14px;margin-top:8px}
+.todo{color:#9A6B00;background:#FFF6DD;border-radius:6px;padding:2px 8px;font-size:17px}
+.chat{margin-top:120px;padding-top:48px;border-top:1px solid #E3E6EC}
+@media(max-width:820px){.demo .phone{right:4%!important}.sec{padding:0 24px}.h1{font-size:28px!important}.h2{font-size:24px!important}.nav{flex-wrap:wrap;row-gap:12px}.meta{grid-template-columns:1fr 1fr}.blk{grid-template-columns:1fr;gap:0;margin-top:64px}.stats{grid-template-columns:1fr}}
+.px{position:absolute;left:0;right:0;top:0;height:760px;overflow:hidden;pointer-events:none;-webkit-mask-image:linear-gradient(#000 62%,transparent);mask-image:linear-gradient(#000 62%,transparent);z-index:0}
+.px-foot{position:absolute;left:0;right:0;bottom:0;height:680px;overflow:hidden;pointer-events:none;-webkit-mask-image:linear-gradient(transparent,#000 42%);mask-image:linear-gradient(transparent,#000 42%);z-index:0}
+canvas.dust{display:block;width:100%;height:100%;image-rendering:pixelated;pointer-events:none}
+.px canvas.dust,.px-foot canvas.dust{position:absolute;inset:0}
+.page{position:relative;overflow:hidden}.page>.sec{position:relative;z-index:1}
+.shot{position:relative;isolation:isolate;margin-top:56px}
+.shot>canvas.dust{position:absolute;z-index:0;left:50%;top:46%;width:100vw;height:108%;transform:translate(-50%,-50%);-webkit-mask-image:linear-gradient(transparent,#000 10%,#000 88%,transparent);mask-image:linear-gradient(transparent,#000 10%,#000 88%,transparent)}
+.shot>img.hero{position:relative;z-index:1;margin-top:0}
+@font-face{font-family:'Geist Serif';src:url('./assets/fonts/GeistSerif-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+.more{display:inline-flex;align-items:center;gap:8px;padding:11px 21px;border-radius:999px;background:#0B0F1A;color:#fff;font:500 14px Geist,sans-serif;text-decoration:none;transition:transform .16s ease,background-color .16s ease}
+.more:hover,.more:focus-visible{color:#fff;background:#1a2030}
+.more:active{transform:scale(.97)}
+.more .arrow{display:inline-block;transition:transform .16s ease}
+.more:hover .arrow{transform:translateX(-2px)}
+.talk{font-family:'Geist Serif',Geist,serif;font-weight:400;font-size:72px}
+@media(max-width:820px){.talk{font-size:45px!important}}
+
+.demo{position:relative;z-index:1;margin-bottom:100px;width:100%;aspect-ratio:2000/1185}
+.demo img{position:absolute;inset:0;width:100%;height:100%;display:block}
+.demo .s2{opacity:0;animation:s2 9.6s ease-in-out infinite}
+.demo .s3{opacity:0;animation:s3 9.6s ease-in-out infinite}
+.demo .cur{position:absolute;width:22px;height:22px;margin:-3px 0 0 -3px;opacity:0;pointer-events:none;animation:cur 9.6s ease-in-out infinite;filter:drop-shadow(0 2px 4px rgba(11,15,26,.35))}
+.demo .ring{position:absolute;left:-12px;top:-12px;width:30px;height:30px;border-radius:50%;border:2px solid #1F5BFF;opacity:0;animation:ring 9.6s ease-out infinite}
+@keyframes cur{
+0%{left:68%;top:62%;opacity:0}
+5%{left:68%;top:62%;opacity:1}
+24%{left:90.3%;top:18.9%}
+29%{left:90.3%;top:18.9%}
+52%{left:55.9%;top:55%}
+61%{left:55.9%;top:55%}
+84%{left:84.4%;top:39.9%}
+91%{left:84.4%;top:39.9%;opacity:1}
+95%{left:84.4%;top:39.9%;opacity:0}
+100%{left:68%;top:62%;opacity:0}}
+@keyframes ring{
+0%,27%{opacity:0;transform:scale(.4)}28%{opacity:1;transform:scale(.4)}32%{opacity:0;transform:scale(1.8)}
+59%{opacity:0;transform:scale(.4)}60%{opacity:1;transform:scale(.4)}64%{opacity:0;transform:scale(1.8)}
+89%{opacity:0;transform:scale(.4)}90%{opacity:1;transform:scale(.4)}94%{opacity:0;transform:scale(1.8)}100%{opacity:0}}
+.demo .phone{position:absolute;right:150px;bottom:-75px;width:25%;aspect-ratio:1029/1893;z-index:2}
+.demo .phone .m2{opacity:0;animation:m2 9.6s ease-in-out infinite}
+.demo .phone .m2[src*="george-mobile-2"]{inset:auto;left:10.1%;top:3.4%;width:79.7%;height:89.8%}
+@keyframes m2{0%,29%{opacity:0}38%,92%{opacity:1}100%{opacity:0}}
+@keyframes s2{0%,29%{opacity:0}38%,92%{opacity:1}100%{opacity:0}}
+@keyframes s3{0%,61%{opacity:0}70%,92%{opacity:1}100%{opacity:0}}
+.demo.cards .phone .m2,.demo.cards .phone .m3,.demo.cards .phone .m4{opacity:0;animation:a2 9.6s ease-in-out infinite}
+.demo.cards .phone .m3{animation-name:a3}.demo.cards .phone .m4{animation-name:a4}
+.demo.acc.cards>.cur{animation-name:ccur}
+@keyframes a4{0%,77%{opacity:0}85%,92%{opacity:1}100%{opacity:0}}
+@keyframes ccur{
+0%{left:60%;top:70%;opacity:0}
+5%{left:60%;top:70%;opacity:1}
+22%{left:29.2%;top:55.9%}
+31%{left:29.2%;top:55.9%}
+54%{left:10.6%;top:41.2%}
+66%{left:10.6%;top:41.2%;opacity:1}
+74%{left:10.6%;top:41.2%;opacity:0}
+100%{left:60%;top:70%;opacity:0}}
+.demo.ph{display:flex;align-items:center;justify-content:center}
+.demo.ph .phc{position:absolute;left:2.7%;right:2.7%;top:3.2%;bottom:6.2%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:32px;border-radius:24px;background:rgba(255,255,255,.7);border:1px solid rgba(11,15,26,.06);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.demo.ph .phc>*{max-width:560px}
+.demo.ph .ico{position:static;width:112px;height:112px;object-fit:contain;margin-bottom:14px}
+.demo.ph .eb{font:500 10.4px Geist,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#5B6270}
+.demo.ph h3{margin:14px 0 12px;font:600 32px/1.1 Geist,sans-serif;letter-spacing:-.02em;color:#0B0F1A}
+.demo.ph p{margin:0;font:400 16px/1.6 Geist,sans-serif;color:#2B3140}
+.demo.ph .call{margin-top:16px;color:#5B6270}.demo.ph .call a{color:#0B0F1A;text-decoration:underline}
+@media(max-width:820px){.seg{overflow-x:auto;justify-content:flex-start}.seg button{white-space:nowrap;padding:10px 16px}.demo.ph .phc{padding:28px 22px}.demo.ph .ico{width:80px;height:80px}.demo.ph h3{font-size:24px}}
+@media(prefers-reduced-motion:reduce){.demo .s2,.demo .s3,.demo .phone .m2,.demo .cur,.demo .ring{animation:none}}
+
+.panel{display:none}.panel.on{display:block}
+.seg{display:flex;width:max-content;max-width:100%;margin:28px auto 0;padding:4px;border-radius:999px;background:#EEF0F4;position:relative;z-index:1}
+.seg button{border:0;background:transparent;font:500 14px Geist,sans-serif;color:#4A5160;padding:10px 22px;border-radius:999px;cursor:pointer;transition:background-color .16s ease,color .16s ease}
+.seg button[aria-selected=true]{background:#fff;color:#0B0F1A;box-shadow:0 1px 4px rgba(11,15,26,.12)}
+.demo.acc .phone{width:20.5%;aspect-ratio:837/1701;right:180px;bottom:-38px}
+.demo.acc .s2{animation-name:a2}.demo.acc .s3{animation-name:a3}
+.demo.acc .phone .m2,.demo.acc .phone .m3{opacity:0;animation:a2 9.6s ease-in-out infinite}.demo.acc .phone .m3{animation-name:a3}
+.demo.acc>.cur{animation-name:acur}.demo.acc>.cur .ring{animation-name:aring}
+@keyframes a2{0%,29%{opacity:0}38%,92%{opacity:1}100%{opacity:0}}
+@keyframes a3{0%,62%{opacity:0}70%,92%{opacity:1}100%{opacity:0}}
+@keyframes acur{
+0%{left:60%;top:70%;opacity:0}
+5%{left:60%;top:70%;opacity:1}
+22%{left:29.9%;top:50.5%}
+31%{left:29.9%;top:50.5%}
+54%{left:10.3%;top:44.4%}
+66%{left:10.3%;top:44.4%;opacity:1}
+74%{left:10.3%;top:44.4%;opacity:0}
+100%{left:60%;top:70%;opacity:0}}
+@keyframes aring{
+0%,26%{opacity:0;transform:scale(.4)}27%{opacity:1;transform:scale(.4)}31%{opacity:0;transform:scale(1.8)}
+59%{opacity:0;transform:scale(.4)}60%{opacity:1;transform:scale(.4)}64%{opacity:0;transform:scale(1.8)}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.demo,.demo *{animation:none!important}}
+.ctry{margin-top:32px}.ctry .cap{font-size:10.4px;letter-spacing:.08em;text-transform:uppercase;color:#6B7280;margin-bottom:14px}.ctry .g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.ctry figure{margin:0}.ctry .im{aspect-ratio:1.41;display:flex;align-items:center;justify-content:center}.ctry .im img{width:100%;height:100%;object-fit:contain}.ctry .im.ph{border-style:dashed;background:#F7F8FA;color:#9AA1AD;font-size:11px}.ctry figcaption{font-size:12px;color:#374151;margin-top:6px}@media(max-width:820px){.ctry .g{grid-template-columns:repeat(3,1fr);gap:10px}}
+.ctry .im{cursor:zoom-in}.ctry .im img{transition:transform .2s}.ctry .im:hover img{transform:scale(1.02)}.lb{position:fixed;inset:0;z-index:100;background:rgba(15,18,28,.82);display:none;align-items:center;justify-content:center;padding:4vh 4vw;cursor:zoom-out}.lb.on{display:flex}.lb .x{position:absolute;top:20px;right:24px;width:40px;height:40px;border:0;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;font-size:22px;line-height:1;cursor:pointer}.lb .x:hover{background:rgba(255,255,255,.26)}.lb img{max-width:100%;max-height:100%;object-fit:contain}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="px"><canvas class="dust" data-kind="hero" data-at="78" data-strength="1" data-fade-top="0" aria-hidden="true"></canvas></div>
+<div class="px-foot"><canvas class="dust" data-kind="foot" data-at="78" data-y="72" data-strength="0.95" data-fade-top="0" aria-hidden="true"></canvas></div>
+<div class="sec" style="padding-top:44px"><a href="index.html" style="font:600 20px Geist,sans-serif;letter-spacing:-.02em;text-decoration:none;color:#0B0F1A">Aneta Rejdych</a></div>
+
+<main class="sec" style="padding-top:96px;padding-bottom:120px">
+<p class="eyebrow">B2B · Live</p>
+<h1 class="h1" style="font-size:49px;max-width:1000px;margin-top:16px">One banking platform for companies, across markets.</h1>
+<p style="font-size:16px;line-height:1.5;max-width:760px;margin:36px 0 0">I joined at the very start and led the design of a business banking platform for small and medium enterprises across Europe, now used by almost 100k companies.</p>
+<div class="meta"><div><div class="k">My role</div><div class="v">Lead Product Designer</div></div><div><div class="k">Team</div><div class="v"><span class="todo">Add team size, e.g. 1 PM, 6 engineers</span></div></div><div><div class="k">Platform</div><div class="v">George Business · Web and mobile</div></div><div><div class="k">Scope</div><div class="v">Platform design, end to end</div></div></div>
+<div class="shot"><canvas class="dust" data-kind="section" data-at="50" data-y="48" data-strength="1" aria-hidden="true"></canvas><div class="panel on" id="p-dashboard" role="tabpanel"><div class="demo" role="img" aria-label="George Business overview: dashboard, customising sections, editing a section"><img class="s1" src="./assets/george-dashboard-1.png" alt=""><img class="s2" src="./assets/george-dashboard-2.png" alt=""><img class="s3" src="./assets/george-dashboard-3.png" alt=""><div class="phone"><img src="./assets/george-mobile-1.png" alt=""><img class="m2" src="./assets/george-mobile-2.png" alt=""></div><div class="cur"><div class="ring"></div><svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 2l15 9-6.5 1.5L9 19z" fill="#0B0F1A" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg></div></div></div><div class="panel" id="p-accounts" role="tabpanel"><div class="demo acc" role="img" aria-label="George Business accounts: account list, account details and history on web; account list, transactions and functions on mobile"><img src="./assets/accounts-web-1.png" alt=""><img class="s2" src="./assets/accounts-web-2.png" alt=""><img class="s3" src="./assets/accounts-web-3.png" alt=""><div class="phone"><img src="./assets/accounts-mobile-1.png" alt=""><img class="m2" src="./assets/accounts-mobile-2.png" alt=""><img class="m3" src="./assets/accounts-mobile-3.png" alt=""></div><div class="cur"><div class="ring"></div><svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 2l15 9-6.5 1.5L9 19z" fill="#0B0F1A" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg></div></div></div><div class="panel" id="p-cards" role="tabpanel"><div class="demo acc cards" role="img" aria-label="George Business cards: card list, card details and card functions on web; card list, card functions, transactions and virtual card manager on mobile"><img src="./assets/cards-web-1.png" alt=""><img class="s2" src="./assets/cards-web-2.png" alt=""><img class="s3" src="./assets/cards-web-3.png" alt=""><div class="phone"><img src="./assets/cards-mobile-1.png" alt=""><img class="m2" src="./assets/cards-mobile-2.png" alt=""><img class="m3" src="./assets/cards-mobile-3.png" alt=""><img class="m4" src="./assets/cards-mobile-4.png" alt=""></div><div class="cur"><div class="ring"></div><svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 2l15 9-6.5 1.5L9 19z" fill="#0B0F1A" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg></div></div></div><div class="panel" id="p-permissions" role="tabpanel"><div class="demo ph"><div class="phc"><img class="ico" src="./assets/icon-permissions.png" alt=""><div class="eb">George Business · Permissions</div><h3>Permissions</h3><p>Companies decide who can see and do what: who views accounts and cards, who prepares payments and who signs them. Permissions are set per person and per product, so teams stay flexible without losing control.</p><p class="call">I am happy to share more insights on this during a call. <a href="mailto:arejdych@gmail.com">Get in touch</a></p></div></div></div><div class="panel" id="p-financial-health" role="tabpanel"><div class="demo ph"><div class="phc"><img class="ico" src="./assets/icon-financial-health.png" alt=""><div class="eb">George Business · Financial Health</div><h3>Financial Health</h3><p>An overview that helps business customers understand their financial position at a glance and spot what needs attention early, so they can make better decisions about cash, spending and growth.</p><p class="call">I am happy to share more insights on this during a call. <a href="mailto:arejdych@gmail.com">Get in touch</a></p></div></div></div></div>
+<div class="seg" role="tablist" aria-label="George Business area"><button role="tab" aria-selected="true" data-p="dashboard">Dashboard</button><button role="tab" aria-selected="false" data-p="accounts">Accounts</button><button role="tab" aria-selected="false" data-p="cards">Cards</button><button role="tab" aria-selected="false" data-p="permissions">Permissions</button><button role="tab" aria-selected="false" data-p="financial-health">Financial Health</button></div>
+<section class="blk"><div class="num">01</div><div><h2 class="h1 h2">Context</h2><p class="body">George Business is the business banking platform of Erste Group, built by George Labs for small and medium enterprises. It covers the essentials of everyday company banking: payments, managing accounts and cards, user management, currency exchange and much more.</p></div></section>
+<section class="blk"><div class="num">02</div><div><h2 class="h1 h2">Strategic problem</h2><p class="body">Erste Group operates in 7 countries, and each country had its own business banking platform. Every platform had a different look, structure and logic, so each of the 7 front-ends had to be designed, developed and maintained separately.</p>
+<div class="ctry"><div class="cap">3 of 7 country platforms · all different</div><div class="g"><figure><div class="im"><img src="assets/country-at.png" alt="Austria" loading="lazy"></div><figcaption>Austria · Telebanking Pro</figcaption></figure><figure><div class="im"><img src="assets/country-cz.png" alt="Czechia" loading="lazy"></div><figcaption>Czechia · Business24</figcaption></figure><figure><div class="im"><img src="assets/country-ro.png" alt="Romania" loading="lazy"></div><figcaption>Romania · Banking24</figcaption></figure></div></div><p class="body" style="margin-top:32px">The challenge was to bring them together into one consistent experience that could scale across countries, languages and regulations. We unified the front-end while giving each country the flexibility to keep its own backend logic.</p><p class="body">The platform also had to scale with each company's needs. Some companies have just a few accounts, others hundreds, with complex user management, many employees and accountant access. On top of that, very strict accessibility regulations applied. They didn't define the design, but they influenced many decisions and had to be taken into account throughout.</p></div></section>
+<section class="blk"><div class="num">03</div><div><h2 class="h1 h2">Role and leadership</h2><p class="body">I joined at the very start and led the design across web and mobile: Accounts, Cards, FX and Trade Finance. I also lead AI adoption in the design team: prototyping in code, shipping PRs to production, AI-assisted UX audits and automated design system specs.</p></div></section>
+<section class="blk"><div class="num">04</div><div><h2 class="h1 h2">Constraints and challenges</h2><p class="body"><span class="todo">Add: key constraints, e.g. regulated banking, legacy migration, localisation for several markets, shared design system.</span></p></div></section>
+<section class="blk"><div class="num">05</div><div><h2 class="h1 h2">Outcome and impact</h2><p class="body">The platform is live in four markets, with three more on the way.</p><div class="stats"><div class="stat"><div class="n">~100k</div><div class="l">companies use it</div></div><div class="stat"><div class="n">4</div><div class="l">markets: 🇦🇹 🇷🇴 🇨🇿 🇸🇰</div></div><div class="stat"><div class="n">3</div><div class="l">upcoming: 🇭🇺 🇭🇷 🇵🇱</div></div></div></div></section>
+<section class="blk"><div class="num">06</div><div><h2 class="h1 h2">Reflection</h2><p class="body"><span class="todo">Add: the main lesson from building a platform across markets, and what you would do differently.</span></p></div></section>
+<div class="chat">
+<div class="h1 talk">Let’s talk.</div>
+<a href="mailto:arejdych@gmail.com" style="display:inline-block;margin-top:32px;font:600 36px Geist,sans-serif;letter-spacing:-.02em;text-decoration:underline;text-underline-offset:8px;color:#0B0F1A">arejdych@gmail.com</a>
+<p style="margin-top:56px"><a class="more" href="index.html#work"><span class="arrow" aria-hidden="true">←</span> Back to selected work</a></p>
+</div>
+</main>
+</div>
+<script>
+document.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){
+document.querySelectorAll('.seg button').forEach(function(x){x.setAttribute('aria-selected',x===b)});
+document.querySelectorAll('.panel').forEach(function(p){p.classList.toggle('on',p.id==='p-'+b.dataset.p)});});});
+</script>
+<div class="lb" id="lb"><button class="x" aria-label="Close">&times;</button><img alt=""></div>
+<script>(function(){var lb=document.getElementById('lb'),im=lb.querySelector('img'),L=[].slice.call(document.querySelectorAll('.ctry .im img')),n=0;function show(k){n=(k+L.length)%L.length;im.src=L[n].src;im.alt=L[n].alt;lb.classList.add('on')}function c(){lb.classList.remove('on')}L.forEach(function(i,k){i.addEventListener('click',function(){show(k)})});lb.addEventListener('click',c);im.addEventListener('click',function(e){e.stopPropagation();show(n+1)});document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')c();else if(e.key==='ArrowRight')show(n+1);else if(e.key==='ArrowLeft')show(n-1)})})();</script>
+<script src="./dust.js"></script>
+</body>
+</html>

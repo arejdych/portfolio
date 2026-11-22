@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Aneta Rejdych — Portfolio</title>
+<style id="nav-critical">
+.nav-bar{position:fixed;top:0;left:0;right:0;z-index:50;padding:16px 64px 0;pointer-events:none;box-sizing:border-box}
+.nav-bar-inner{max-width:1312px;margin:0 auto;pointer-events:none}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:29px;padding:17px 26px;border-radius:999px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.75);box-shadow:0 10px 40px rgba(11,15,26,.08);backdrop-filter:blur(18px) saturate(1.35);-webkit-backdrop-filter:blur(18px) saturate(1.35);pointer-events:auto}
+.nav .brand{font:600 24px Geist,sans-serif;letter-spacing:-.02em}
+.nav .links{display:flex;gap:43px;font-size:18px;font-weight:500;flex-wrap:wrap}
+.nav a{text-decoration:none;color:#0B0F1A;padding:8px 14px;border-radius:999px;border:1px solid transparent;transition:background-color .16s ease,color .16s ease,border-color .16s ease}
+.nav a:hover,.nav a:focus-visible{color:#1F5BFF;background:transparent;border:1px solid #B7CBFF}
+.nav a:active{color:#1F5BFF;background:transparent;border:1px solid #8FB0FF}
+.nav-spacer{height:86px}
+@media(max-width:820px){.nav-bar{padding:12px 24px 0}.nav{flex-wrap:wrap;row-gap:14px;padding:16px 20px}.nav .links{gap:23px;font-size:17px}.nav-spacer{height:108px}}
+</style>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,400;0,500;0,600;0,700;1,600&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Geist Serif';src:url('./assets/fonts/GeistSerif-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+html{scroll-padding-top:100px}
+body{margin:0}
+a{color:#0B0F1A}a:hover{color:#1F5BFF}
+.cv a{color:#1F5BFF;text-decoration:none}.cv a:hover{color:#1442C8}
+.px{position:absolute;left:0;right:0;top:0;height:1040px;overflow:hidden;pointer-events:none;-webkit-mask-image:linear-gradient(#000 62%,transparent);mask-image:linear-gradient(#000 62%,transparent)}
+.px-foot{position:absolute;left:0;right:0;bottom:0;height:920px;overflow:hidden;pointer-events:none;-webkit-mask-image:linear-gradient(transparent,#000 42%);mask-image:linear-gradient(transparent,#000 42%)}
+canvas.dust{display:block;width:100%;height:100%;image-rendering:pixelated;pointer-events:none}
+.px canvas.dust,.px-foot canvas.dust{position:absolute;inset:0}
+.shot{position:relative;isolation:isolate}
+.shot>canvas.dust{position:absolute;z-index:0;left:50%;top:46%;width:100vw;height:108%;transform:translate(-50%,-50%);-webkit-mask-image:linear-gradient(transparent,#000 10%,#000 88%,transparent);mask-image:linear-gradient(transparent,#000 10%,#000 88%,transparent)}
+.shot>img{position:relative;z-index:1;width:100%;display:block}
+.phead{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:48px}.phead .pr{padding-top:28px}.phead .pr>p{margin-top:0!important}.phead h2{max-width:none!important}.phead .more{margin:28px 0 0!important}@media(max-width:820px){.phead{grid-template-columns:1fr;gap:24px}.phead .pr{padding-top:0}}
+.h1{font-family:Geist,sans-serif;font-weight:600;letter-spacing:-.04em;line-height:.98;margin:0;color:#0B0F1A}
+.chip{display:inline-block;padding:6px 11px;border:1px solid #0B0F1A;border-radius:999px;font:500 11px Geist,sans-serif;color:#0B0F1A;background:#fff}
+.mq{overflow:hidden;margin-top:40px;width:100vw;margin-left:calc(50% - 50vw);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mt{display:flex;width:max-content;animation:mq 45s linear infinite}
+.mg{display:flex;gap:12px;padding-right:12px}
+.q{color:#5B6270;margin-left:-6px}
+.pair{display:inline-flex;align-items:center;gap:10px;padding:18px 28px;border:1px solid #D9DCE3;border-radius:999px;font:500 18px Geist,sans-serif;white-space:nowrap;background:#fff}
+@keyframes mq{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.mt{animation:none}}
+.tag{display:inline-block;padding:6px 11px;border-radius:999px;background:#EEF0F4;color:#4A5160;font:500 11px Geist,sans-serif}
+.more{display:inline-flex;align-items:center;gap:8px;margin-top:28px;padding:11px 21px;border-radius:999px;background:#0B0F1A;color:#fff;font:500 14px Geist,sans-serif;text-decoration:none;transition:transform .16s ease,background-color .16s ease}
+.more:hover,.more:focus-visible{color:#fff;background:#1a2030}
+.more:active{transform:scale(.97)}
+.more .arrow{display:inline-block;transition:transform .16s ease}
+.more:hover .arrow{transform:translateX(2px)}
+.sec{position:relative;padding:0 64px;max-width:1312px;margin:0 auto}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.cv{max-width:830px;display:grid;grid-template-columns:200px 1fr;gap:32px;padding:28px 0;border-top:1px solid #D9DCE3}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:64px;text-align:center}.stat{padding-top:0}.stat>div:last-child{justify-content:center}
+#further .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+#further .card{display:flex;flex-direction:column;height:100%;text-decoration:none;border:1px solid #D9DCE3;border-radius:19px;padding:26px;background:#fff;color:#0B0F1A;box-sizing:border-box}
+#further a.card,#further a.card:hover{color:#0B0F1A}#further a.card .go{color:#1F5BFF;margin-top:auto;padding-top:16px}#further a.card:hover .go{color:#1442C8}
+@media(max-width:820px){#further .cards{max-width:100%;grid-template-columns:1fr}}
+.nav-bar{position:fixed;top:0;left:0;right:0;z-index:50;padding:16px 64px 0;pointer-events:none;box-sizing:border-box}
+.nav-bar-inner{max-width:1312px;margin:0 auto;pointer-events:none}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:29px;padding:17px 26px;border-radius:999px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.75);box-shadow:0 10px 40px rgba(11,15,26,.08);backdrop-filter:blur(18px) saturate(1.35);-webkit-backdrop-filter:blur(18px) saturate(1.35);pointer-events:auto}
+.nav .brand{font:600 24px Geist,sans-serif;letter-spacing:-.02em}
+.nav .links{display:flex;gap:43px;font-size:18px;font-weight:500;flex-wrap:wrap}
+.nav a{text-decoration:none;color:#0B0F1A;padding:8px 14px;border-radius:999px;border:1px solid transparent;transition:background-color .16s ease,color .16s ease,border-color .16s ease}
+.nav a:hover,.nav a:focus-visible{color:#1F5BFF;background:transparent;border:1px solid #B7CBFF}
+.nav a:active{color:#1F5BFF;background:transparent;border:1px solid #8FB0FF}
+.nav-spacer{height:86px}
+@media(max-width:820px){.two{grid-template-columns:1fr;gap:32px}.cv{grid-template-columns:1fr;gap:8px}.stats{grid-template-columns:1fr;gap:24px}.sec{padding:0 24px}.h1{font-size:28px!important}.px{height:760px}.px-foot{height:680px}.nav-bar{padding:12px 24px 0}.nav{flex-wrap:wrap;row-gap:14px;padding:16px 20px}.nav .links{gap:23px;font-size:17px}.nav-spacer{height:108px}}
+</style>
+<script>
+(function () {
+  if (window.__dust) return;
+  window.__dust = true;
+  var bayer = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5].map(function (v) {
+    return (v + 0.5) / 16;
+  });
+  var cobalt = [[70, 116, 214, 0.3], [40, 92, 206, 0.42], [22, 70, 190, 0.52]];
+  var azure = [[56, 138, 212, 0.3], [30, 116, 198, 0.42], [14, 94, 182, 0.52]];
+  var violet = [[132, 108, 214, 0.28], [108, 78, 196, 0.4], [86, 54, 178, 0.5]];
+  var indigo = [[92, 128, 220, 0.28], [70, 102, 210, 0.4], [48, 78, 198, 0.5]];
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function field(seed) {
+    var state = seed >>> 0;
+    var lattice = new Float32Array(256);
+    var i;
+    for (i = 0; i < 256; i++) {
+      state = (1664525 * state + 1013904223) >>> 0;
+      lattice[i] = state / 4294967296;
+    }
+    function cell(x, y) {
+      return lattice[((y + 16) % 16) * 16 + ((x + 16) % 16)];
+    }
+    var table = new Float32Array(16384);
+    for (var y = 0; y < 128; y++) {
+      for (var x = 0; x < 128; x++) {
+        var fx = (x / 128) * 16;
+        var fy = (y / 128) * 16;
+        var x0 = Math.floor(fx);
+        var y0 = Math.floor(fy);
+        var tx = fx - x0;
+        var ty = fy - y0;
+        tx = tx * tx * (3 - 2 * tx);
+        ty = ty * ty * (3 - 2 * ty);
+        var top = cell(x0, y0) + (cell(x0 + 1, y0) - cell(x0, y0)) * tx;
+        var bot = cell(x0, y0 + 1) + (cell(x0 + 1, y0 + 1) - cell(x0, y0 + 1)) * tx;
+        table[y * 128 + x] = top + (bot - top) * ty;
+      }
+    }
+    return function (x, y) {
+      var sx = (x % 128 + 128) % 128;
+      var sy = (y % 128 + 128) % 128;
+      var ix = sx | 0;
+      var iy = sy | 0;
+      var tx = sx - ix;
+      var ix2 = (ix + 1) % 128;
+      var iy2 = (iy + 1) % 128;
+      var top = table[iy * 128 + ix] + (table[iy * 128 + ix2] - table[iy * 128 + ix]) * tx;
+      var bot = table[iy2 * 128 + ix] + (table[iy2 * 128 + ix2] - table[iy2 * 128 + ix]) * tx;
+      return top + (bot - top) * (sy - iy);
+    };
+  }
+
+  var shape = field(11);
+  var grain = field(29);
+  var tint = field(47);
+
+  function paint(canvas, time) {
+    var cssW = canvas.clientWidth;
+    var cssH = canvas.clientHeight;
+    if (!cssW || !cssH) return;
+    var dw = Math.max(1, Math.ceil(cssW / 2));
+    var dh = Math.max(1, Math.ceil(cssH / 2));
+    if (canvas.width !== dw || canvas.height !== dh) {
+      canvas.width = dw;
+      canvas.height = dh;
+      canvas._dust = null;
+    }
+    var ctx = canvas.getContext("2d", { alpha: true });
+    if (!canvas._dust) canvas._dust = ctx.createImageData(dw, dh);
+    var data = canvas._dust.data;
+    data.fill(0);
+    var seconds = time / 1000;
+    var at = Number(canvas.dataset.at || 70) / 100;
+    var strength = Number(canvas.dataset.strength || 1);
+    var fadeTop = canvas.dataset.fadeTop !== "0";
+    var section = canvas.dataset.kind === "section";
+    var foot = canvas.dataset.kind === "foot";
+    var cx = at * dw + 0.045 * dw * Math.sin(0.21 * seconds);
+    var cy = canvas.dataset.y ? (Number(canvas.dataset.y) / 100) * dh : 0.12 * dh;
+    var hero = canvas.dataset.kind === "hero";
+    var rx = hero ? Math.max(0.34 * dw, 140) : foot ? Math.max(0.4 * dw, 150) : section ? dw * 0.5 : Math.max(0.34 * dw, 130);
+    var ry = hero ? Math.min(Math.max(0.52 * dh, 170), 360) : foot ? Math.min(Math.max(0.52 * dh, 170), 360) : section ? dh * 0.48 : Math.min(Math.max(0.5 * dh, 150), 310);
+    var cool = foot ? violet : cobalt;
+    var warm = foot ? indigo : azure;
+    var fade = Math.max(0.38 * dh, 120);
+    var pulse = 1 + 0.07 * Math.sin(0.45 * seconds);
+    var scrollX = 1.7 * seconds;
+    var scrollY = 0.65 * seconds;
+    var sweep = cx + rx * (((seconds / 8) % 1) * 2.8 - 1.4);
+    var sweepW = 0.22 * rx;
+    var x0 = Math.max(0, Math.floor(cx - 1.3 * rx));
+    var x1 = Math.min(dw, Math.ceil(cx + 1.3 * rx));
+    var y0 = Math.max(0, Math.floor(cy - 1.3 * ry));
+    var y1 = Math.min(dh, Math.ceil(cy + 1.3 * ry));
+    for (var y = y0; y < y1; y += 2) {
+      var ny = (y + 1 - cy) / (ry * pulse);
+      var fadeY = Math.min(1, fadeTop ? y / fade : 1, (dh - y) / fade);
+      var fadeCurve = fadeY * fadeY * fadeY * (fadeY * (fadeY * 6 - 15) + 10);
+      for (var x = x0; x < x1; x += 2) {
+        var nx = (x + 1 - cx) / (rx * pulse);
+        var warp = 0.62 + 0.62 * shape(0.025 * x + 0.12 * scrollX, 0.025 * y * 1.3 - 0.2 * scrollY);
+        var r2 = (nx * nx + ny * ny) * warp;
+        if (r2 >= 1) continue;
+        var edge = 1 - r2;
+        edge = edge * edge * (3 - 2 * edge) * fadeCurve;
+        var n = grain(0.09 * x + scrollX, 0.09 * y * 1.4 + scrollY);
+        var dx = (x - sweep) / sweepW;
+        var density = strength * edge * (0.36 + 0.5 * n) * 0.72 * (1 + 0.24 * Math.exp(-dx * dx));
+        if (density * 3 < 0.04) continue;
+        var mix = Math.min(1, Math.max(0, (tint(0.054 * x - 0.6 * scrollX, 0.054 * y + scrollY) - 0.35) * 2));
+        var yEnd = Math.min(y + 2, y1);
+        var xEnd = Math.min(x + 2, x1);
+        for (var py = y; py < yEnd; py++) {
+          for (var px = x; px < xEnd; px++) {
+            var level = Math.min(3, (density * 3 + bayer[(py & 3) * 4 + (px & 3)]) | 0);
+            if (level <= 0) continue;
+            var c = cool[level - 1];
+            var a = warm[level - 1];
+            var p = (py * dw + px) * 4;
+            data[p] = c[0] + (a[0] - c[0]) * mix;
+            data[p + 1] = c[1] + (a[1] - c[1]) * mix;
+            data[p + 2] = c[2] + (a[2] - c[2]) * mix;
+            data[p + 3] = 255 * (c[3] + (a[3] - c[3]) * mix);
+          }
+        }
+      }
+    }
+    ctx.putImageData(canvas._dust, 0, 0);
+  }
+
+  function start(canvas) {
+    if (canvas.dataset.dustOn) return;
+    canvas.dataset.dustOn = "1";
+    var seen = false;
+    var last = 0;
+    var watch = new IntersectionObserver(function (entries) {
+      seen = entries[0].isIntersecting;
+    }, { rootMargin: "200px 0px" });
+    watch.observe(canvas);
+    function frame(now) {
+      if (!canvas.isConnected) return;
+      if (seen && (reduce || now - last >= 66)) {
+        last = now;
+        paint(canvas, reduce ? 4000 : now);
+      }
+      if (!reduce) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  function scan() {
+    var nodes = document.querySelectorAll("canvas.dust");
+    for (var i = 0; i < nodes.length; i++) start(nodes[i]);
+  }
+  scan();
+  var ticks = 0;
+  var timer = setInterval(function () {
+    scan();
+    if (++ticks > 40) clearInterval(timer);
+  }, 200);
+})();
+</script>
+</helmet>
+<div style="background:#fff;color:#0B0F1A;font-family:Geist,sans-serif;position:relative;overflow:hidden">
+<div class="px"><canvas class="dust" data-kind="hero" data-at="78" data-strength="1" data-fade-top="0" aria-hidden="true"></canvas></div>
+<div class="px-foot"><canvas class="dust" data-kind="foot" data-at="78" data-y="72" data-strength="0.95" data-fade-top="0" aria-hidden="true"></canvas></div>
+
+<div class="nav-bar">
+<div class="nav-bar-inner">
+<nav class="nav">
+<div class="brand">Aneta Rejdych</div>
+<div class="links" style="display:flex;gap:43px;font-size:18px;font-weight:500;flex-wrap:wrap"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#further">More</a><a href="#contact">Contact</a></div>
+</nav>
+</div>
+</div>
+<div class="nav-spacer" aria-hidden="true"></div>
+
+<div class="sec" style="padding-top:150px;padding-bottom:150px;position:relative">
+<h1 class="h1" style="font-family:'Geist Serif',Geist,serif;font-weight:400;font-size:72px;max-width:1100px">Hi, I’m Aneta!</h1>
+<p style="font-size:21px;line-height:1.5;max-width:760px;margin:36px 0 0">Senior product designer, specializing in fintech and crypto.<br>I approach projects from discovery to delivery, pushing AI to its limits from prototyping in code through shipping the work to production.</p>
+</div>
+
+<div class="sec" id="work" style="padding-top:40px;padding-bottom:40px"><div class="h1" style="font-size:46px">Selected work</div></div>
+
+<div class="sec project" style="padding-top:80px;padding-bottom:100px">
+<div class="phead"><div class="pl"><div style="font:500 12px Geist,sans-serif;margin-bottom:16px">01 · George Business</div>
+<h2 class="h1" style="font-size:51px;max-width:1000px">One banking platform for companies, across markets.</h2>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 0"><span class="tag">B2B</span><span class="tag">Web and mobile</span><span class="tag">AI prototyping</span><span class="tag">PRs to production</span></div>
+</div><div class="pr">
+<p style="font-size:16px;line-height:1.5;max-width:760px;margin:28px 0 0">I joined at the very start and led the design of a business banking platform for small and medium enterprises across Europe, now used by almost 100k companies. It brings several legacy systems together into one consistent experience and covers the essentials of everyday company banking: payments, managing accounts and cards, user management, currency exchange and much more.</p>
+<a class="more" href="work-george.html" style="margin:28px 0 48px">Read more <span class="arrow" aria-hidden="true">→</span></a>
+</div></div>
+<div class="shot"><canvas class="dust" data-kind="section" data-at="74" data-y="48" data-strength="1.05" aria-hidden="true"></canvas><img src="./assets/3c98c3872dfa30173990e68482df1516.png" alt="George Business web and mobile overview"></div>
+<div class="stats">
+<div class="stat"><div style="font-size:14px;margin-bottom:12px">Used by</div><div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap"><div class="h1" style="font-size:32px">~100k</div><div style="font-size:22px">companies</div></div></div>
+<div class="stat"><div style="font-size:14px;margin-bottom:12px">Available markets</div><div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap"><div class="h1" style="font-size:32px">4</div><div role="img" aria-label="Austria, Romania, Czechia, Slovakia" style="font-size:28px;letter-spacing:6px">🇦🇹 🇷🇴 🇨🇿 🇸🇰</div></div></div>
+<div class="stat"><div style="font-size:14px;margin-bottom:12px">Upcoming markets</div><div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap"><div class="h1" style="font-size:32px">3</div><div role="img" aria-label="Hungary, Croatia, Poland" style="font-size:28px;letter-spacing:6px">🇭🇺 🇭🇷 🇵🇱</div></div></div>
+</div>
+</div>
+
+<div class="sec project" style="padding-top:80px;padding-bottom:100px">
+<div class="phead"><div class="pl"><div style="font:500 12px Geist,sans-serif;margin-bottom:16px">02 · Foreign exchange for companies</div>
+<h2 class="h1" style="font-size:51px;max-width:1000px">Big currency trades, done fast, at good rates.</h2>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 0"><span class="tag">B2B</span><span class="tag">Web and mobile</span></div>
+</div><div class="pr">
+<p style="font-size:16px;line-height:1.5;max-width:760px;margin:28px 0 0">I led the design of the FX feature in George Business. Companies trade currency in large amounts, so they need to move quickly and secure competitive rates. Live rates and flexible settlement timing let them complete a trade in a few taps, and make currency exchange part of everyday company banking.</p>
+<a class="more" href="work-fx.html" style="margin:28px 0 48px">Read more <span class="arrow" aria-hidden="true">→</span></a>
+</div></div>
+<div class="shot"><canvas class="dust" data-kind="section" data-at="26" data-y="48" data-strength="1" aria-hidden="true"></canvas><img src="./assets/b71110fd5d1461a70054628a0e40e2bd.png" alt="FX products on web and mobile"></div>
+<div class="mq"><div class="mt">
+<div class="mg"><span class="pair">🇪🇺🇨🇿 EUR<span class="q">CZK</span></span><span class="pair">🇺🇸🇨🇿 USD<span class="q">CZK</span></span><span class="pair">🇬🇧🇨🇿 GBP<span class="q">CZK</span></span><span class="pair">🇪🇺🇺🇸 EUR<span class="q">USD</span></span><span class="pair">🇪🇺🇬🇧 EUR<span class="q">GBP</span></span><span class="pair">🇪🇺🇵🇱 EUR<span class="q">PLN</span></span><span class="pair">🇪🇺🇭🇺 EUR<span class="q">HUF</span></span><span class="pair">🇪🇺🇷🇴 EUR<span class="q">RON</span></span><span class="pair">🇪🇺🇨🇭 EUR<span class="q">CHF</span></span><span class="pair">🇺🇸🇵🇱 USD<span class="q">PLN</span></span></div>
+<div class="mg" aria-hidden="true"><span class="pair">🇪🇺🇨🇿 EUR<span class="q">CZK</span></span><span class="pair">🇺🇸🇨🇿 USD<span class="q">CZK</span></span><span class="pair">🇬🇧🇨🇿 GBP<span class="q">CZK</span></span><span class="pair">🇪🇺🇺🇸 EUR<span class="q">USD</span></span><span class="pair">🇪🇺🇬🇧 EUR<span class="q">GBP</span></span><span class="pair">🇪🇺🇵🇱 EUR<span class="q">PLN</span></span><span class="pair">🇪🇺🇭🇺 EUR<span class="q">HUF</span></span><span class="pair">🇪🇺🇷🇴 EUR<span class="q">RON</span></span><span class="pair">🇪🇺🇨🇭 EUR<span class="q">CHF</span></span><span class="pair">🇺🇸🇵🇱 USD<span class="q">PLN</span></span></div>
+</div></div>
+</div>
+
+<div class="sec project" style="padding-top:80px;padding-bottom:100px">
+<div style="display:block">
+<div class="phead"><div class="pl"><div style="font:500 12px Geist,sans-serif;margin-bottom:16px">03 · FIT, financial health</div>
+<h2 class="h1" style="font-size:51px">Taking care of money can be fun.</h2>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 0"><span class="tag">B2C</span><span class="tag">Mobile</span></div>
+</div><div class="pr">
+<p style="font-size:16px;line-height:1.5;margin:28px 0 0">FIT is financial health for individuals, designed to make looking after money feel easy and a little fun. AI-supported insights turn spending into clear next steps: investment comparisons, automatic budgets from transaction history, and gentle nudges when people are on track.</p>
+<a class="more" href="work-fit.html">Read more <span class="arrow" aria-hidden="true">→</span></a>
+</div></div>
+<div class="shot"><canvas class="dust" data-kind="section" data-at="68" data-y="46" data-strength="1" aria-hidden="true"></canvas><img src="./assets/2172ecc829ba8020ecbad2107733669f.png" alt="FIT financial health insights on mobile"></div>
+</div>
+</div>
+
+<div class="sec" id="experience" style="padding-top:80px;padding-bottom:100px">
+<div class="h1" style="font-size:46px;margin-bottom:48px">Experience</div>
+<div class="cv"><div style="font-weight:500">Nov 2025 – Present</div><div><b>Senior Product Designer, <a href="https://www.george-labs.com" target="_blank" rel="noopener">George Labs</a> (Erste Group)</b><div style="margin-top:8px;line-height:1.55">Lead design of George Business across web and mobile: Accounts, Cards, FX and Trade Finance. Lead AI adoption in the design team: prototyping in code, shipping PRs, AI-assisted UX audits, automated design system specs and Figma Code Connect.</div></div></div>
+<div class="cv"><div style="font-weight:500">Jun 2023 – Nov 2025</div><div><b>Senior Product Designer, Stealth Company (Freelance)</b><div style="margin-top:8px;line-height:1.55">Led the earn and DeFi offering of a crypto platform with $40B+ in assets: staking across 20+ assets (1M+ users staking), EigenLayer restaking, Auto-Earn with almost 80% activation, and Dual Investment.</div></div></div>
+<div class="cv"><div style="font-weight:500">Oct 2019 – May 2023</div><div><b>Senior Product Designer, <a href="https://www.george-labs.com" target="_blank" rel="noopener">George Labs</a> (Erste Group)</b><div style="margin-top:8px;line-height:1.55">Designed George Business for 60k+ companies, plus digital onboarding with identity verification and automated company register data, and the Financial Health tool that benchmarks SMEs against their industry.</div></div></div>
+<div class="cv"><div style="font-weight:500">Sep 2018 – Nov 2019</div><div><b>Senior Product Designer, <a href="https://www.linkedin.com/company/comgy-io" target="_blank" rel="noopener">Comgy</a></b><div style="margin-top:8px;line-height:1.55">Digital sub-metering platform: meter gateway management web tool, installer app and tenant portal with consumption and CO₂ insights.</div></div></div>
+<div class="cv"><div style="font-weight:500">Jun 2017 – Sep 2018</div><div><b>Senior Product Designer, <a href="https://www.tieto.com" target="_blank" rel="noopener">Tieto</a></b><div style="margin-top:8px;line-height:1.55">Manufacturing execution system for paper mills and a smart-metering installer app for Wiener Netze.</div></div></div>
+<div class="cv"><div style="font-weight:500">Jul 2015 – Jun 2017</div><div><b>Product Designer, <a href="https://www.broadcom.com" target="_blank" rel="noopener">Broadcom</a> (Automic)</b><div style="margin-top:8px;line-height:1.55">Release Manager and Release Orchestration; member of the Automic UX Governance Board.</div></div></div>
+<div class="cv"><div style="font-weight:500">2008 – 2015</div><div><b>UX Designer, Pilot and earlier roles</b><div style="margin-top:8px;line-height:1.55">Startup product design, UX at RST Software House, and early work in architecture and graphic design.</div></div></div>
+</div>
+<div class="sec" id="education" style="padding-top:0;padding-bottom:40px">
+<div class="h1" style="font-size:32px;margin-bottom:16px">Education</div>
+<div class="cv"><div style="font-weight:500">2019 – 2020</div><div style="line-height:1.55"><b>Postgraduate Degree, User Experience &amp; Product Design</b><div>AGH University of Science and Technology, Kraków</div></div></div>
+<div class="cv"><div style="font-weight:500">2008 – 2014</div><div style="line-height:1.55"><b>M.Arch. / B.Arch., Architecture and Town Planning</b><div>Technical University of Wrocław</div></div></div>
+</div>
+
+<div class="sec" id="further" style="padding-top:80px;padding-bottom:40px">
+<div class="h1" style="font-size:46px">More</div>
+<p style="font-size:16px;line-height:1.5;max-width:720px;margin:28px 0 40px;color:#5B6270">Projects, experiments, and articles.</p>
+<div class="cards">
+<a class="card" href="article.html">
+<div style="font:500 10.4px Geist,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#5B6270">Article</div>
+<div class="h1" style="font-size:21px;margin-top:10px;color:#0B0F1A">How to evaluate a stock</div>
+<p style="font-size:14px;line-height:1.5;margin:13px 0 0;color:#0B0F1A">A short explanation of a scoring model for comparing stocks.</p>
+<div class="go" style="font-size:14px;font-weight:500">Read more →</div>
+</a>
+<a class="card" href="work-ai.html">
+<div style="font:500 10.4px Geist,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#5B6270">Case study</div>
+<div class="h1" style="font-size:21px;margin-top:10px;color:#0B0F1A">AI Experiments</div>
+<p style="font-size:14px;line-height:1.5;margin:13px 0 0;color:#0B0F1A">Hands-on trials with AI in product design: prototyping in code, testing workflows, and pushing tools until they break or ship.</p>
+<div class="go" style="font-size:14px;font-weight:500">Read more →</div>
+</a>
+<a class="card" href="work-trading.html">
+<div style="font:500 10.4px Geist,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#5B6270">Webpage design</div>
+<div class="h1" style="font-size:21px;margin-top:10px;color:#0B0F1A">Trading indicator</div>
+<p style="font-size:14px;line-height:1.5;margin:13px 0 0;color:#0B0F1A">Technical analysis indicator for stocks and indexes.</p>
+<div class="go" style="font-size:14px;font-weight:500">Read more →</div>
+</a>
+</div>
+</div>
+
+<div class="sec" id="contact" style="padding-top:60px;padding-bottom:140px">
+<div class="h1" style="font-family:'Geist Serif',Geist,serif;font-weight:400;font-size:72px">Let’s talk.</div>
+<a href="mailto:arejdych@gmail.com" style="display:inline-block;margin-top:32px;font:600 36px Geist,sans-serif;letter-spacing:-.02em;text-decoration:underline;text-underline-offset:8px">arejdych@gmail.com</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5600}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
