@@ -42,6 +42,23 @@ canvas.dust{display:block;width:100%;height:100%;image-rendering:pixelated;point
 .talk{font-family:'Geist Serif',Geist,serif;font-weight:400;font-size:72px}
 @media(max-width:820px){.talk{font-size:45px!important}}
 </style>
+<style>
+.demo{position:relative;z-index:1;margin-bottom:100px;width:100%;aspect-ratio:2000/1185}
+.demo img{position:absolute;inset:0;width:100%;height:100%;display:block}
+.demo .cur{position:absolute;width:22px;height:22px;margin:-3px 0 0 -3px;opacity:0;pointer-events:none;animation:fcur 16s ease-in-out infinite;filter:drop-shadow(0 2px 4px rgba(11,15,26,.35))}
+.demo .ring{position:absolute;left:-12px;top:-12px;width:30px;height:30px;border-radius:50%;border:2px solid #1F5BFF;opacity:0;animation:fring 16s ease-out infinite}
+.demo .s2{opacity:0;animation:fs2 16s ease-in-out infinite}.demo .s3{opacity:0;animation:fs3 16s ease-in-out infinite}
+.demo .phone{position:absolute;left:13.72%;bottom:-4.9%;width:20.5%;aspect-ratio:984/2000;z-index:2}
+.demo .phone img{opacity:0;animation:fph 16s linear infinite backwards}
+@keyframes fs2{0%,19%{opacity:0}23%,44%{opacity:1}48%,100%{opacity:0}}
+@keyframes fs3{0%,46%{opacity:0}50%,94%{opacity:1}100%{opacity:0}}
+@keyframes fph{0%{opacity:0}1.5%,14%{opacity:1}14.01%,100%{opacity:0}}
+@keyframes fcur{0%{left:60%;top:70%;opacity:0}4%{left:60%;top:70%;opacity:1}16%,20%{left:74.5%;top:55.7%}40%,44%{left:75.4%;top:89.4%}94%{left:75.4%;top:89.4%;opacity:1}100%{opacity:0}}
+@keyframes fring{0%,16%{opacity:0;transform:scale(.4)}17%{opacity:1;transform:scale(.4)}21%{opacity:0;transform:scale(1.8)}40%{opacity:0;transform:scale(.4)}41%{opacity:1;transform:scale(.4)}45%{opacity:0;transform:scale(1.8)}100%{opacity:0}}
+.demo .tap{position:absolute;width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;background:#0b2a6b;box-shadow:0 0 0 1.5px #fff;opacity:0;animation:fdot 16s linear infinite backwards;z-index:3}
+@keyframes fdot{0%,9%{opacity:0;transform:scale(1.8)}10.5%{opacity:1;transform:scale(1)}12.5%{opacity:1;transform:scale(.7)}13.5%,100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.demo,.demo *{animation:none!important}.demo .s2,.demo .s3,.demo .phone img+img{opacity:0}.demo .phone img:first-child{opacity:1}}
+</style>
 </head>
 <body>
 <div class="page">
@@ -54,7 +71,7 @@ canvas.dust{display:block;width:100%;height:100%;image-rendering:pixelated;point
 <h1 class="h1" style="font-size:49px;max-width:1000px;margin-top:16px">Big currency trades, done fast, at good rates.</h1>
 <p style="font-size:16px;line-height:1.5;max-width:760px;margin:36px 0 0">I led the design of the FX feature in George Business, where companies trade currency in large amounts and need to move quickly.</p>
 <div class="meta"><div><div class="k">My role</div><div class="v">Lead Product Designer</div></div><div><div class="k">Team</div><div class="v"><span class="todo">Add team</span></div></div><div><div class="k">Platform</div><div class="v">George Business · Web and mobile</div></div><div><div class="k">Scope</div><div class="v">FX trading, end to end</div></div></div>
-<div class="shot"><canvas class="dust" data-kind="section" data-at="50" data-y="48" data-strength="1" aria-hidden="true"></canvas><img class="hero" src="./assets/b71110fd5d1461a70054628a0e40e2bd.png" alt="FX products on web and mobile"></div>
+<div class="shot"><canvas class="dust" data-kind="section" data-at="50" data-y="48" data-strength="1" aria-hidden="true"></canvas><div class="demo fx" role="img" aria-label="FX on web: dashboard, sell EUR panel, trade confirmation; on mobile: pairs, buy flow, review and trades list"><img src="./assets/fx-web-1.png" alt=""><img class="s2" src="./assets/fx-web-2.png" alt=""><img class="s3" src="./assets/fx-web-3.png" alt=""><div class="phone"><img style="animation-delay:0s" src="./assets/fx-mobile-1.png" alt=""><img style="animation-delay:2s" src="./assets/fx-mobile-2.png" alt=""><img style="animation-delay:4s" src="./assets/fx-mobile-3.png" alt=""><img style="animation-delay:6s" src="./assets/fx-mobile-4.png" alt=""><img style="animation-delay:8s" src="./assets/fx-mobile-5.png" alt=""><img style="animation-delay:10s" src="./assets/fx-mobile-6.png" alt=""><img style="animation-delay:12s" src="./assets/fx-mobile-7.png" alt=""><img style="animation-delay:14s" src="./assets/fx-mobile-8.png" alt=""><i class="tap" style="left:72%;top:45%;animation-delay:0s"></i><i class="tap" style="left:50%;top:69%;animation-delay:2s"></i><i class="tap" style="left:40%;top:48%;animation-delay:4s"></i><i class="tap" style="left:50%;top:90%;animation-delay:6s"></i><i class="tap" style="left:50%;top:90%;animation-delay:8s"></i><i class="tap" style="left:50%;top:90%;animation-delay:12s"></i><i class="tap" style="left:30%;top:29%;animation-delay:14s"></i></div><div class="cur"><div class="ring"></div><svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 2l15 9-6.5 1.5L9 19z" fill="#0B0F1A" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg></div></div></div>
 <section class="blk"><div class="num">01</div><div><h2 class="h1 h2">Context</h2><p class="body">Foreign exchange is part of everyday company banking: paying suppliers abroad, receiving foreign income, managing currency risk. Companies trade in large amounts, so speed and a competitive rate matter.</p></div></section>
 <section class="blk"><div class="num">02</div><div><h2 class="h1 h2">Strategic problem</h2><p class="body">How do you let a company secure a good rate on a large trade without the trade feeling risky or slow? Rates move constantly, and users need confidence in the price they see.</p>
 <p class="body"><span class="todo">Add: what the previous experience looked like.</span></p></div></section>
